@@ -8,25 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		F672E40E2B9843FB007D7221 /* SwiftUI_BoxOfficeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E40D2B9843FB007D7221 /* SwiftUI_BoxOfficeApp.swift */; };
-		F672E4102B9843FB007D7221 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E40F2B9843FB007D7221 /* ContentView.swift */; };
+		F672E4102B9843FB007D7221 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E40F2B9843FB007D7221 /* MainView.swift */; };
 		F672E4122B9843FC007D7221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F672E4112B9843FC007D7221 /* Assets.xcassets */; };
 		F672E4152B9843FC007D7221 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F672E4142B9843FC007D7221 /* Preview Assets.xcassets */; };
 		F672E41C2B9847F8007D7221 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E41B2B9847F8007D7221 /* NetworkManager.swift */; };
 		F672E41F2B98488B007D7221 /* BoxOfficeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E41E2B98488B007D7221 /* BoxOfficeAPI.swift */; };
 		F672E4212B986961007D7221 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E4202B986961007D7221 /* EndPoint.swift */; };
 		F672E4232B987652007D7221 /* BoxOfficeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E4222B987652007D7221 /* BoxOfficeDTO.swift */; };
+		F672E4252B98E12D007D7221 /* RankCellDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E4242B98E12D007D7221 /* RankCellDetailView.swift */; };
+		F672E4272B98EA54007D7221 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E4262B98EA54007D7221 /* Date+.swift */; };
+		F672E42A2B98EAB2007D7221 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672E4292B98EAB2007D7221 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F672E40A2B9843FB007D7221 /* SwiftUI_BoxOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_BoxOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F672E40D2B9843FB007D7221 /* SwiftUI_BoxOfficeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BoxOfficeApp.swift; sourceTree = "<group>"; };
-		F672E40F2B9843FB007D7221 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F672E40F2B9843FB007D7221 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F672E4112B9843FC007D7221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F672E4142B9843FC007D7221 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F672E41B2B9847F8007D7221 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F672E41E2B98488B007D7221 /* BoxOfficeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeAPI.swift; sourceTree = "<group>"; };
 		F672E4202B986961007D7221 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		F672E4222B987652007D7221 /* BoxOfficeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeDTO.swift; sourceTree = "<group>"; };
+		F672E4242B98E12D007D7221 /* RankCellDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCellDetailView.swift; sourceTree = "<group>"; };
+		F672E4262B98EA54007D7221 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		F672E4292B98EAB2007D7221 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				F672E40D2B9843FB007D7221 /* SwiftUI_BoxOfficeApp.swift */,
-				F672E40F2B9843FB007D7221 /* ContentView.swift */,
+				F672E40F2B9843FB007D7221 /* MainView.swift */,
+				F672E4292B98EAB2007D7221 /* MainViewModel.swift */,
+				F672E4242B98E12D007D7221 /* RankCellDetailView.swift */,
+				F672E4282B98EA7A007D7221 /* Utility */,
 				F672E41D2B9847FD007D7221 /* Networking */,
 				F672E4112B9843FC007D7221 /* Assets.xcassets */,
 				F672E4132B9843FC007D7221 /* Preview Content */,
@@ -85,6 +94,14 @@
 				F672E4222B987652007D7221 /* BoxOfficeDTO.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		F672E4282B98EA7A007D7221 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F672E4262B98EA54007D7221 /* Date+.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,8 +178,11 @@
 				F672E41C2B9847F8007D7221 /* NetworkManager.swift in Sources */,
 				F672E4212B986961007D7221 /* EndPoint.swift in Sources */,
 				F672E4232B987652007D7221 /* BoxOfficeDTO.swift in Sources */,
-				F672E4102B9843FB007D7221 /* ContentView.swift in Sources */,
+				F672E4252B98E12D007D7221 /* RankCellDetailView.swift in Sources */,
+				F672E4102B9843FB007D7221 /* MainView.swift in Sources */,
 				F672E40E2B9843FB007D7221 /* SwiftUI_BoxOfficeApp.swift in Sources */,
+				F672E4272B98EA54007D7221 /* Date+.swift in Sources */,
+				F672E42A2B98EAB2007D7221 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
