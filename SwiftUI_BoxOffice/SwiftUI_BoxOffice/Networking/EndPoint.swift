@@ -7,14 +7,14 @@
 
 import Foundation
 
-class EndPoint {
+final class EndPoint {
     private let baseURL: String
     private let path: String
     private var scheme: String
     private var queryItems: [URLQueryItem]
     let method: HTTPMethod
     
-    init(baseURL: String, path: String, scheme: String = "https", queryItems: [URLQueryItem], method: HTTPMethod) {
+    init(baseURL: String, path: String, scheme: String = "https", queryItems: [URLQueryItem] = [], method: HTTPMethod) {
         self.baseURL = baseURL
         self.path = path
         self.scheme = scheme

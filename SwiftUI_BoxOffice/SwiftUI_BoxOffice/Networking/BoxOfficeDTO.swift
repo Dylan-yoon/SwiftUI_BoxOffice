@@ -13,7 +13,8 @@ struct BoxOfficeDTO: Codable {
 
 // MARK: - BoxOfficeResult
 struct BoxOfficeResult: Codable {
-    let boxofficeType, showRange: String
+    let boxofficeType: String
+    let showRange: String
     let dailyBoxOfficeList: [DailyBoxOfficeList]
 }
 

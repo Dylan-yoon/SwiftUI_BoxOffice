@@ -29,8 +29,8 @@ struct NetworkManager {
                 completion(.failure(.responseError))
                 return
             }
-
-            debugPrint(response.statusCode)
+            
+            debugPrint("NETWORK RESPONSE: ", response.statusCode)
             
             guard let data = data else {
                 completion(.failure(.getDataError))
