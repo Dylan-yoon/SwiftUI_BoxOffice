@@ -30,6 +30,9 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
+## Secrets plist File
+SwiftUI_BoxOffice/Secrets.plist
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace

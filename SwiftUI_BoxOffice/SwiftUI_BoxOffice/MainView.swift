@@ -12,15 +12,19 @@ struct MainView: View {
     
     var body: some View {
         NavigationStack {
-            Text(viewmodel.title)
-            
             List {
                 ForEach(viewmodel.data.indices, id: \.self) { index in
-                    RankCell(movieData: $viewmodel.data[index])
-                        .badge(">")
+                    
+                    NavigationLink {
+                        somVi()
+                    } label: {
+                        RankCell(movieData: $viewmodel.data[index])
+                    }
                 }
             }
             .listStyle(.plain)
+            .navigationTitle(Text(viewmodel.title))
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
@@ -52,4 +56,10 @@ struct RankCell: View {
 
 #Preview {
     MainView()
+}
+
+struct somVi: View {
+    var body: some View {
+        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
+    }
 }
