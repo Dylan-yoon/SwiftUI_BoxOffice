@@ -17,7 +17,39 @@ struct NetworkManager {
         guard let url = endpoint.generateURL().url else { return }
         
         var request = URLRequest(url: url)
+        
+        for headerItem in endpoint.headers {
+            request.addValue(headerItem.value, forHTTPHeaderField: headerItem.key)
+        }
+        
         request.httpMethod = endpoint.method.rawValue
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if error != nil {
+                completion(.failure(.defaultsError))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                completion(.failure(.responseError))
+                return
+            }
+            
+            debugPrint("NETWORK RESPONSE: ", response.statusCode)
+            
+            guard let data = data else {
+                completion(.failure(.getDataError))
+                return
+            }
+            
+            completion(.success(data))
+        }
+        task.resume()
+    }
+    
+    func fetchData(for url: URL, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+        
+        var request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if error != nil {

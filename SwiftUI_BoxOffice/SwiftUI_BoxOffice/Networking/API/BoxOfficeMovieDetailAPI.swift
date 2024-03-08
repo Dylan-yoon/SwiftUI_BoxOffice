@@ -8,7 +8,7 @@
 import Foundation
 
 final class BoxOfficeMovieDetailAPI {
-    private let key = UserDefaults.standard.string(forKey: "BoxOfficeAPIKey")
+    private let key = Bundle.main.boxofficeKey
     private let movieCd: String
     
     init(movieCd: String) {

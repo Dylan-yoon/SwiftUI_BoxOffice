@@ -14,9 +14,8 @@ struct MainView: View {
         NavigationStack {
             List {
                 ForEach(viewmodel.data.indices, id: \.self) { index in
-                    
                     NavigationLink {
-                        somVi()
+                        MainDetailView(movieNm: viewmodel.data[index].movieNm, movieCd: viewmodel.data[index].movieCd)
                     } label: {
                         RankCell(movieData: $viewmodel.data[index])
                     }
@@ -56,10 +55,4 @@ struct RankCell: View {
 
 #Preview {
     MainView()
-}
-
-struct somVi: View {
-    var body: some View {
-        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
-    }
 }

@@ -38,27 +38,6 @@ struct DailyBoxOfficeList: Codable {
     let audiAcc: String
     let scrnCnt: String
     let showCnt: String
-    
-    enum CodingKeys: String, CodingKey {
-        case rnum
-        case rank
-        case rankInten
-        case rankOldAndNew
-        case movieCd
-        case movieNm
-        case openDt
-        case salesAmt
-        case salesShare
-        case salesInten
-        case salesChange
-        case salesAcc
-        case audiCnt
-        case audiInten
-        case audiChange
-        case audiAcc
-        case scrnCnt
-        case showCnt
-    }
 }
 
 enum RankOldAndNew: String, Codable {

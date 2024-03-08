@@ -8,7 +8,7 @@
 import Foundation
 
 final class BoxOfficeDailyAPI {
-    private let key = UserDefaults.standard.string(forKey: "BoxOfficeAPIKey")
+    private let key = Bundle.main.boxofficeKey
     private let targetDt: String
     private let itemPerPage: Int
     private let multMovieYn: String?

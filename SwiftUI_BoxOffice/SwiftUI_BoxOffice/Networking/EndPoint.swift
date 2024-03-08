@@ -12,14 +12,21 @@ final class EndPoint {
     private let path: String
     private var scheme: String
     private var queryItems: [URLQueryItem]
+    var headers: [String: String]
     let method: HTTPMethod
     
-    init(baseURL: String, path: String, scheme: String = "https", queryItems: [URLQueryItem] = [], method: HTTPMethod) {
+    init(baseURL: String,
+         path: String, 
+         scheme: String = "https", 
+         queryItems: [URLQueryItem] = [],
+         headers: Dictionary<String, String> = [:],
+         method: HTTPMethod) {
         self.baseURL = baseURL
         self.path = path
         self.scheme = scheme
         self.queryItems = queryItems
         self.method = method
+        self.headers = headers
     }
     
     func generateURL() -> URLComponents {
