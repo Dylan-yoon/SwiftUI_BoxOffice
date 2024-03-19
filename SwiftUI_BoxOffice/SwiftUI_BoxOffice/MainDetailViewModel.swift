@@ -39,7 +39,13 @@ class MainDetailViewModel: ObservableObject {
     
     private func configureImageData(movieTitle: String) {
         KakaoAPI().fetchData(title: movieTitle) { imageData in
-            guard let url = URL(string: imageData[0].imageUrl) else {
+            
+            guard let url = imageData.first?.imageUrl else {
+                self.imageData = nil
+                return
+            }
+            
+            guard let url = URL(string: url) else {
                 return
             }
             

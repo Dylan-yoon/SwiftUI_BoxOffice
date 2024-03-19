@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class MainViewModel: ObservableObject {
     private let api: BoxOfficeDailyAPI
     var title: String
@@ -19,5 +20,20 @@ class MainViewModel: ObservableObject {
         api.fetchData { listData in
             self.data = listData
         }
+    }
+    
+    func numberFormatter(dateInfo: String) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        
+        guard let numberAudiCnt = Int(dateInfo) else {
+            return dateInfo
+        }
+        
+        guard let formmatCnt = formatter.string(for: numberAudiCnt) else {
+            return dateInfo
+        }
+        
+        return formmatCnt
     }
 }
