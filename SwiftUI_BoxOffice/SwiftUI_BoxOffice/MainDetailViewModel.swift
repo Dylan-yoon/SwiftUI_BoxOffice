@@ -16,8 +16,6 @@ class MainDetailViewModel: ObservableObject {
     init(movieNm: String, movieCd: String) {
         self.movieNm = movieNm
         self.movieCd = movieCd
-        
-        configureDetailData()
     }
     
     final class InfoData: Identifiable {
@@ -30,7 +28,7 @@ class MainDetailViewModel: ObservableObject {
         }
     }
     
-    private func configureDetailData() {
+    func configureDetailData() {
         BoxOfficeMovieDetailAPI(movieCd: movieCd).fetchData { movieInfo in
             self.configureImageData(movieTitle: movieInfo.movieNm)
             self.configureInfoData(movieInfoData: movieInfo)

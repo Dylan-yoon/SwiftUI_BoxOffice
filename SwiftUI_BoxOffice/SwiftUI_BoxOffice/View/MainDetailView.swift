@@ -25,6 +25,10 @@ struct MainDetailView: View {
                 .navigationTitle(viewModel.movieNm)
             }
         }
+        .task {
+            // View Appear 에서 비동기 작업
+            viewModel.configureDetailData()
+        }
     }
     
     private var customImageView: some View {
@@ -46,16 +50,18 @@ struct DetailTextView: View {
     let detail: String
     
     var body: some View {
-        HStack {
-            Spacer()
-            Text(title)
-                .font(.title2)
-                .frame(minWidth: 70)
-            Spacer()
-            Text(detail)
-            Spacer()
-                .padding(1)
-        }
+        VStack(alignment: .leading, content: {
+            HStack() {
+                Text(title)
+                    .font(.title2)
+                    .frame(minWidth: 70)
+                    .padding(10)
+                Text(detail)
+                    .frame(alignment: .leading)
+                    .padding(10)
+                Spacer()
+            }
+        })
     }
 }
 
