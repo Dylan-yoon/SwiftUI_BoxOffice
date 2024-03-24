@@ -9,9 +9,11 @@ import Foundation
 
 @MainActor
 class MainViewModel: ObservableObject {
-    private let api: BoxOfficeDailyAPI
-    var title: String
+    private var api: BoxOfficeDailyAPI
+    
+    @Published var title: String
     @Published var data = [DailyBoxOfficeList]()
+    @Published var date = Date()
     
     init() {
         self.title = Date().yesterday(with: true)
@@ -35,5 +37,15 @@ class MainViewModel: ObservableObject {
         }
         
         return formmatCnt
+    }
+    
+    func changeData() {
+        self.title = date.someDay(with: true)
+        
+        self.api = BoxOfficeDailyAPI(targetDt: Date().yesterday(with: false))
+        
+        api.fetchData { listData in
+            self.data = listData
+        }
     }
 }

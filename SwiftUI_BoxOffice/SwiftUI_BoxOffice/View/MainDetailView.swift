@@ -55,10 +55,10 @@ struct DetailTextView: View {
                 Text(title)
                     .font(.title2)
                     .frame(minWidth: 70)
-                    .padding(10)
+                    .padding(2)
                 Text(detail)
                     .frame(alignment: .leading)
-                    .padding(10)
+                    .padding(2)
                 Spacer()
             }
         })

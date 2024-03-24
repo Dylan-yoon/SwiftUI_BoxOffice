@@ -26,6 +26,7 @@
 		F69B803C2B99B8AD002675CE /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B803B2B99B8AD002675CE /* Bundle+.swift */; };
 		F69B803E2B99C050002675CE /* KakaoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B803D2B99C050002675CE /* KakaoAPI.swift */; };
 		F69B80402B99C05A002675CE /* KakaoImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B803F2B99C05A002675CE /* KakaoImageDTO.swift */; };
+		F6B94AC12BAF1CCE005FDEE6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B94AC02BAF1CCE005FDEE6 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		F69B803B2B99B8AD002675CE /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
 		F69B803D2B99C050002675CE /* KakaoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPI.swift; sourceTree = "<group>"; };
 		F69B803F2B99C05A002675CE /* KakaoImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoImageDTO.swift; sourceTree = "<group>"; };
+		F6B94AC02BAF1CCE005FDEE6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				F672E40F2B9843FB007D7221 /* MainView.swift */,
+				F6B94AC02BAF1CCE005FDEE6 /* CalendarView.swift */,
 				F672E42B2B98EE37007D7221 /* MainDetailView.swift */,
 				F672E4242B98E12D007D7221 /* RankCellDetailView.swift */,
 			);
@@ -234,6 +237,7 @@
 				F69B80402B99C05A002675CE /* KakaoImageDTO.swift in Sources */,
 				F672E42C2B98EE37007D7221 /* MainDetailView.swift in Sources */,
 				F672E41F2B98488B007D7221 /* BoxOfficeAPI.swift in Sources */,
+				F6B94AC12BAF1CCE005FDEE6 /* CalendarView.swift in Sources */,
 				F672E41C2B9847F8007D7221 /* NetworkManager.swift in Sources */,
 				F672E4212B986961007D7221 /* EndPoint.swift in Sources */,
 				F672E42E2B98EFE7007D7221 /* BoxOfficeMovieDetailDTO.swift in Sources */,

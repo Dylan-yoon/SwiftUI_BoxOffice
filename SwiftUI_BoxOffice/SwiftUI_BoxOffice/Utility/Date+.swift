@@ -25,4 +25,21 @@ extension Date {
         
         return current_date_string
     }
+    
+    func someDay(with dash: Bool) -> String {
+        guard let today = Calendar.current.date(byAdding: .day, value: 0, to: self) else {
+            return "20240101"
+        }
+        
+        let formatter = DateFormatter()
+        if dash {
+            formatter.dateFormat = "yyyy-MM-dd"
+        } else {
+            formatter.dateFormat = "yyyyMMdd"
+        }
+        
+        let current_date_string = formatter.string(from: today)
+        
+        return current_date_string
+    }
 }

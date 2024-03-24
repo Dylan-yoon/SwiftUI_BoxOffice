@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var viewModel = MainViewModel()
+    @ObservedObject var viewModel = MainViewModel()
+    @State private var showCalendar = false
     
     var body: some View {
         NavigationStack {
@@ -24,6 +25,22 @@ struct MainView: View {
             .listStyle(.plain)
             .navigationTitle(Text(viewModel.title))
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        self.showCalendar.toggle()
+                    }, label: {
+                        Text("날짜 선택")
+                    })
+                    .sheet(isPresented: $showCalendar, content: {
+                        //캘린더뷰
+                        CalendarView(date: $viewModel.date, showCalendar: $showCalendar)
+                            .onDisappear(perform: {
+                                viewModel.changeData()
+                            })
+                    })
+                }
+            }
         }
     }
 }
